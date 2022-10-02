@@ -42,10 +42,10 @@ while i < len(current_data['players']):
     else:
         i += 1
 
+# taking the difference
+
 delta = []
 new_players = []
-
-# taking the difference
 
 for member in current_data['players']:
 
@@ -64,11 +64,22 @@ for member in current_data['players']:
 
 inactive_data = []
 inactive_members = []
+
 for member in delta:
     if member['delta_expirience'] <= inactive_xp_threshold:
         inactive_data.append(member)
         inactive_members.append(member['player_name'])
 
+# present data
+
 with open('inactive_data.json', 'w') as f:
     f.write(json.dumps(inactive_data, indent=2))
-print(inactive_members)
+
+print('\n{} members did not reach the goal of {} Xp\n'.format(len(inactive_members), inactive_xp_threshold))
+for username in inactive_members:
+    print(username)
+
+print('\n{} members have been inactive longer than 6 months\n'.format(len(long_inactive)))
+for username in long_inactive:
+    print(username)
+
