@@ -5,8 +5,8 @@ RuneClan is down for the forceable future and RunePixels does not have the featu
 - beautifulsoup4
 
 # ToDo
-[x] refactoring to OOP so you only have to run once
-[x] adding compare module to find inactives based on xp gained
+- [x] refactoring to OOP so you only have to run once
+- [x] adding compare module to find inactives based on xp gained
 - ~~possibly adding classes to make clan members instances to minimize generated files~~
   - unnecessary
 - ~~move away from JSON and output CSV file to open in Excel~~
